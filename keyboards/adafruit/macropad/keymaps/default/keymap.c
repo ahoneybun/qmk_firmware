@@ -17,31 +17,32 @@
 #include QMK_KEYBOARD_H
 
 enum layers{
-  MAIN,
-  FUNC
+  HOME,
+  WORK,
+  NUMBERS
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [MAIN] = LAYOUT(
+  [HOME] = LAYOUT(
                     LT(1,KC_MUTE),
       KC_MPRV, KC_MPLY, KC_MNXT,
-      KC_7,   KC_8, KC_9,
-      KC_4,   KC_5, KC_6,
-      MT(MOD_LCTL | MOD_LGUI, KC_1),   KC_2, MT(MOD_LSFT | MOD_LGUI, KC_3)
+      LCA(KC_T), LGUI(KC_D), LGUI(KC_E),
+      _______, TO(WORK), _______,
+      KC_1, KC_2, KC_3
   ),
-  [FUNC] = LAYOUT(
+  [WORK] = LAYOUT(
                         _______,
-      CK_TOGG, AU_TOGG, MU_TOGG,
-      _______, BL_TOGG, _______,
       _______, _______, _______,
+      _______, _______, _______,
+      _______, TO(HOME), _______,
       _______, _______, _______
   ),
 };
 
 #ifdef ENCODER_MAP_ENABLE
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-  [MAIN] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-  [FUNC] = { ENCODER_CCW_CW(_______, _______) },
+  [HOME] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+  [WORK] = { ENCODER_CCW_CW(KC_PGUP, KC_PGDN) },
 };
 #endif
 
