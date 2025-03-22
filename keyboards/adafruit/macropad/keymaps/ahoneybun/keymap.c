@@ -62,15 +62,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    | Previous |  Play   | Next    |
    | Track    |  Pause  | Track   |
    |----------|---------|---------|
-   | Launch   | Launch  | Launch  |
-   | Terminal | Dolphin | Elisa   |
+   | Reuse    | Reuse   | Reuse   |
+   |          |         |         |
    |----------|---------|---------|
-   | Launch   | NONE    | NONE    |
-   | OBS      |         |         |
+   | Reuse    | Reuse   | Reuse   |
+   |          |         |         |
    |----------|---------|---------|
-   | Show     | Work    | Lock    |
-   | Desktop  | Layer   | Screen  |
-   ------------------------------
+   | Reuse    | Reuse   | Reuse   |
+   |          |         |         |
+    ------------------------------
 
    */
 
