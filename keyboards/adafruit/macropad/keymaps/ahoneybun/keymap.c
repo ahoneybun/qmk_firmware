@@ -36,8 +36,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   | Launch   | Launch  | Launch  |
   | Terminal | Dolphin | Elisa   |
   |----------|---------|---------|
-  | Launch   | NONE    | NONE    |
-  | OBS      |         |         |
+  | Launch   | Launch  | Launch  |
+  | OBS      | FreeCAD | Zed     |
   |----------|---------|---------|
   | Show     | Work    | Lock    |
   | Desktop  | Layer   | Screen  |
@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                     LT(1,KC_MUTE),
       KC_MPRV, KC_MPLY, KC_MNXT,
       LCA(KC_T), LGUI(KC_E), LGUI(KC_M),
-      LGUI(KC_O), _______, _______,
+      LGUI(KC_O), LGUI(KC_F), LGUI(KC_Z),
       LGUI(KC_D), TO(WORK), LGUI(KC_L)
   ),
 
