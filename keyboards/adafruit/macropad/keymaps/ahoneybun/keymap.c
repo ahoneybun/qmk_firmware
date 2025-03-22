@@ -23,6 +23,28 @@ enum layers{
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+
+  /* Layer 0, home layer
+
+   ------------------------------
+  |      O L E D       |  Volume |
+  |      DISPLAY       |  Knob   |
+  |----------|---------|---------|
+  | Previous |  Play   | Next    |
+  | Track    |  Pause  | Track   |
+  |----------|---------|---------|
+  | Launch   | Launch  | Launch  |
+  | Terminal | Dolphin | Elisa   |
+  |----------|---------|---------|
+  | Launch   | NONE    | NONE    |
+  | OBS      |         |         |
+  |----------|---------|---------|
+  | Show     | Work    | Lock    |
+  | Desktop  | Layer   | Screen  |
+   ------------------------------
+
+  */
+
   [HOME] = LAYOUT(
                     LT(1,KC_MUTE),
       KC_MPRV, KC_MPLY, KC_MNXT,
@@ -30,6 +52,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       LGUI(KC_O), _______, _______,
       LGUI(KC_D), TO(WORK), LGUI(KC_L)
   ),
+
+  /* Layer 1, work layer
+   *
+   - *-----------------------------
+   |      O L E D       |  Volume |
+   |      DISPLAY       |  Knob   |
+   |----------|---------|---------|
+   | Previous |  Play   | Next    |
+   | Track    |  Pause  | Track   |
+   |----------|---------|---------|
+   | Launch   | Launch  | Launch  |
+   | Terminal | Dolphin | Elisa   |
+   |----------|---------|---------|
+   | Launch   | NONE    | NONE    |
+   | OBS      |         |         |
+   |----------|---------|---------|
+   | Show     | Work    | Lock    |
+   | Desktop  | Layer   | Screen  |
+   ------------------------------
+
+   */
+
   [WORK] = LAYOUT(
                         _______,
       _______, _______, _______,
