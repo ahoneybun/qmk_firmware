@@ -26,31 +26,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Layer 0, home layer
 
-   ------------------------------
-  |      O L E D       |  Volume |
-  |      DISPLAY       |  Knob   |
-  |----------|---------|---------|
-  | Previous |  Play   | Next    |
-  | Track    |  Pause  | Track   |
-  |----------|---------|---------|
-  | Launch   | Launch  | Launch  |
-  | Terminal | Dolphin | Elisa   |
-  |----------|---------|---------|
-  | Launch   | Launch  | Launch  |
-  | OBS      | FreeCAD | Zed     |
-  |----------|---------|---------|
-  | Show     | Work    | Lock    |
-  | Desktop  | Layer   | Screen  |
-   ------------------------------
+   -------------------------------
+  |      O L E D       |  Volume  |
+  |      DISPLAY       |  Knob    |
+  |----------|---------|----------|
+  | Previous |  Play   | Next     |
+  | Track    |  Pause  | Track    |
+  |----------|---------|----------|
+  | Empty    | Empty   | Empty    |
+  |          |         |          |
+  |----------|---------|----------|
+  | Empty    | Empty   | Empty    |
+  |          |         |          |
+  |----------|---------|----------|
+  |Workspace | Work    |Workspace |
+  | Left     | Layer   | Right    |
+   -------------------------------
 
   */
 
   [HOME] = LAYOUT(
                     LT(1,KC_MUTE),
       KC_MPRV, KC_MPLY, KC_MNXT,
-      LCA(KC_T), LGUI(KC_E), LGUI(KC_M),
-      LGUI(KC_O), LGUI(KC_F), LGUI(KC_Z),
-      LGUI(KC_D), TO(WORK), LGUI(KC_L)
+      _______, _______, _______,
+      _______, _______, _______,
+      LGUI(KC_PGUP), TO(WORK), LGUI(KC_PGDN)
   ),
 
   /* Layer 1, work layer
@@ -79,14 +79,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, _______, _______,
       _______, _______, _______,
       _______, _______, _______,
-      _______, TO(HOME), _______
+      LCTL(LGUI(KC_LEFT)), TO(HOME), LCTL(LGUI(KC_RIGHT))
   ),
 };
 
 #ifdef ENCODER_MAP_ENABLE
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
   [HOME] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-  [WORK] = { ENCODER_CCW_CW(KC_PGDN, KC_PGUP) },
+  [WORK] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
 };
 #endif
 
